@@ -1,3 +1,4 @@
+SET search_path TO osm,public;
 -- Add an action table for the purpose of capturing all actions applied to a database.
 -- The table is populated during application of a changeset, then osmosisUpdate is called,
 -- then the table is cleared all within a single database transaction.

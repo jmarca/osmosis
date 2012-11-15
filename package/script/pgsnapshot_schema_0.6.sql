@@ -1,3 +1,6 @@
+CREATE SCHEMA osm;
+SET search_path TO osm;
+
 -- Database creation script for the simple PostgreSQL schema.
 
 -- Drop all tables if they exist.
@@ -13,6 +16,7 @@ DROP TABLE IF EXISTS schema_info;
 -- Drop all stored procedures if they exist.
 DROP FUNCTION IF EXISTS osmosisUpdate();
 
+SET search_path TO osm,public;
 
 -- Create a table which will contain a single row defining the current schema version.
 CREATE TABLE schema_info (
